@@ -1,0 +1,214 @@
+.mainBanner {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner-desc-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 200px;
+}
+.wave-pattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  filter: brightness(100%) invert(1);
+}
+
+.hero-mobile {
+  margin-inline-end: 68px;
+  width: 436px;
+}
+.mainBanner-parent {
+  overflow: hidden;
+  direction: rtl;
+  background-color: #e5f0fa;
+  height: 100%;
+  position: relative;
+  clip-path: ellipse(100% 100% at 50% 0%);
+}
+.banner-desc {
+  width: 475px;
+  text-align: center;
+
+  .main-title {
+    color: #4a4a4a;
+    font-size: 36px;
+    text-transform: capitalize;
+    line-height: 72px;
+    font-weight: 700;
+    text-align: start;
+    margin-bottom: 0;
+  }
+  .second-title {
+    font-size: 28px;
+    line-height: 40px;
+    color: #4a4a4a;
+    font-weight: 400;
+    text-align: start;
+    margin: 0;
+  }
+  .download-links {
+    justify-content: flex-start;
+    a {
+      transition: background-color ease-in-out 0.2s;
+    }
+    a:hover {
+      background-color: $yellow-color;
+    }
+  }
+}
+
+// scroll animated
+
+.scroll-btn {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  z-index: 4;
+  align-items: center;
+  justify-content: center;
+  bottom: 45px;
+  text-align: center;
+  span {
+    width: 24px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: rgba(2, 119, 250, 0);
+    border: 2px solid #aec9e1;
+    position: relative;
+    display: inline-block;
+    transition: all ease 0.3s;
+  }
+}
+
+.scroll-btn span::after {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: #aec9e1;
+  top: 6px;
+  opacity: 0;
+  left: 48%;
+  z-index: 3;
+  position: absolute;
+  transform: translateX(-48%);
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .banner-desc-parent {
+    margin-top: 150px;
+  }
+  .banner-desc-parent{
+    margin-top: 140px;
+  }
+  .wave-pattern{
+    bottom: -20px;
+  }
+}
+
+@include max-1200 {
+  .hero-mobile {
+    width: 380px;
+  }
+}
+
+@include max-992 {
+  .hero-mobile {
+    width: 280px;
+    margin: 0;
+  }
+  .wave-pattern{
+    bottom: 0;
+  }
+  .banner-desc .main-title {
+    font-size: 29px;
+  }
+  .banner-desc .second-title {
+    font-size: 25px;
+  }
+}
+
+@include max-768 {
+  .banner-desc-parent {
+    flex-direction: column;
+    justify-content: unset;
+    position: unset;
+    margin-top: 160px;
+    top: unset;
+    transform: unset;
+    row-gap: 20px;
+  }
+
+  .scroll-btn span {
+    border-color: #121d32;
+  }
+  .scroll-btn span::after {
+    background-color: #121d32;
+  }
+  .wave-pattern {
+    height: auto;
+  }
+  .banner-desc .download-links {
+    width: 100%;
+    justify-content: center;
+  }
+  .banner-desc .download-links a {
+    width: 100%;
+    max-width: 185px;
+  }
+  .hero-mobile {
+    width: 250px;
+  }
+
+  .scroll-btn {
+    bottom: 30px;
+  }
+  .banner-desc {
+    width: 100%;
+  }
+  .download-links {
+    margin-top: 30px;
+  }
+  .logo img {
+    height: 70px;
+  }
+
+  .banner-desc .main-title {
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .mainBanner-parent {
+    clip-path: ellipse(160% 100% at 50% 0%);
+  }
+  .banner-desc .second-title {
+    font-size: 21px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .banner-desc .download-links a .google,
+  .banner-desc .download-links a .apple {
+    height: 26px;
+    width: auto;
+  }
+  .download-links a {
+    height: 52px;
+  }
+}
