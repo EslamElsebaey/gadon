@@ -1272,7 +1272,7 @@ header {
     flex-direction: column;
     justify-content: unset;
     position: unset;
-    margin-top: 160px;
+    margin-top: 170px;
     top: unset;
     transform: unset;
     row-gap: 20px;
@@ -1295,7 +1295,7 @@ header {
     max-width: 185px;
   }
   .hero-mobile {
-    width: 250px;
+    width: 240px;
   }
   .scroll-btn {
     bottom: 30px;
