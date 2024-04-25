@@ -1880,15 +1880,22 @@ footer {
     margin-top: 50px;
   }
 }
-html[dir=ltr] .about .para, html[dir=ltr] .ques-answer {
+html[dir=ltr] .about .para,
+html[dir=ltr] .ques-answer {
   line-height: 1.7;
 }
 html[dir=ltr] .mainBanner-parent .banner-desc {
   direction: ltr;
   inset-inline-end: 12px;
 }
-html[dir=ltr] .features .general-title, html[dir=ltr] .list-item .item-title, html[dir=ltr] .client-reviews .general-title, html[dir=ltr] .banner-desc .main-title, html[dir=ltr] .banner-desc .second-title {
+html[dir=ltr] .list-item .item-title,
+html[dir=ltr] .client-reviews .general-title,
+html[dir=ltr] .banner-desc .main-title,
+html[dir=ltr] .banner-desc .second-title {
   line-height: 1.3;
+}
+html[dir=ltr] .features .general-title {
+  line-height: 1.2;
 }
 html[dir=ltr] .ques-text {
   line-height: 1.35;
@@ -1896,7 +1903,8 @@ html[dir=ltr] .ques-text {
 html[dir=ltr] .features-cont {
   direction: ltr;
 }
-html[dir=ltr] .client-reviews .item .quote-text, html[dir=ltr] .about .item .desc {
+html[dir=ltr] .client-reviews .item .quote-text,
+html[dir=ltr] .about .item .desc {
   line-height: 1.5;
 }
 html[dir=ltr] .download-parent {
@@ -1911,6 +1919,9 @@ html[dir=ltr] .download-parent {
   html[dir=ltr] .about .para {
     line-height: 1.5;
   }
+  html[dir=ltr] .features .general-title {
+    line-height: 1.3;
+  }
   html[dir=ltr] .about .item .title {
     line-height: 1.4;
   }
@@ -1920,10 +1931,12 @@ html[dir=ltr] .download-parent {
   html[dir=ltr] .ques-answer {
     line-height: 1.6;
   }
-  html[dir=ltr] .client-reviews .general-title, html[dir=ltr] .faq .general-title {
+  html[dir=ltr] .client-reviews .general-title,
+  html[dir=ltr] .faq .general-title {
     line-height: 1.3;
   }
-  html[dir=ltr] .download-parent .content .para, html[dir=ltr] .footer-content .copyright {
+  html[dir=ltr] .download-parent .content .para,
+  html[dir=ltr] .footer-content .copyright {
     line-height: 1.4;
   }
   html[dir=ltr] .form-div .text {
