@@ -1856,6 +1856,25 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+.footer-content .main-links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  margin-bottom: 25px;
+}
+.footer-content .main-links a {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #808080;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+}
+.footer-content .main-links a:hover {
+  color: #66a7db;
+}
 .footer-content .copyright {
   font-size: 14px;
   color: #1a1a1a;
@@ -1878,6 +1897,11 @@ footer {
   footer {
     padding-bottom: 40px;
     margin-top: 50px;
+  }
+  .footer-content .main-links {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
   }
 }
 html[dir=ltr] .about .para,
